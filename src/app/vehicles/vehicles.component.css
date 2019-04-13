@@ -1,0 +1,37 @@
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+table {
+    width: 90%;
+    margin-right: 2%;
+}
+
+tbody {
+    border-left: 1px solid #f4dc42;    
+}
+
+h1 {
+    margin-right: 3%;
+    margin-top: 40vh;
+    margin-left: 2%;
+}
+
+mat-paginator {
+    background-color: black;
+    color: #f4dc42; 
+}
+
+
+input {
+    color:#f4dc42;
+    margin-left: 2%;
+    border-bottom: 1px solid #f4dc42 !important;
+}
+
+::placeholder {
+    color: #f4dc42;
+}

@@ -1,0 +1,28 @@
+
+<input type="text" placeholder="Search.." [(ngModel)]="keyword" *ngIf='data !== null'>  
+
+<div class="main-container" *ngIf='data !== null'>
+  
+  <h1>Movies</h1>
+
+    <table class="highlight centered">
+        <thead>
+          <tr>
+          <th>Title</th>
+          <th>Episode</th>
+          <th>Released</th>
+          <th>Director</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of data.results | filter:keyword"> 
+            <td>{{movie.title}}</td>
+            <td>{{movie.episode_id}}</td>
+            <td>{{movie.release_date}}</td>
+            <td>{{movie.director}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+

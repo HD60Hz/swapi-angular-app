@@ -1,0 +1,35 @@
+
+<input type="text" placeholder="Search.." [(ngModel)]="keyword" *ngIf='getData() !== undifined'>  
+
+<div class="main-container" *ngIf='getData() !== undifined'>
+    
+  <h1>Starships</h1>
+
+    <table class="highlight centered">
+            <thead>
+              <tr>
+              <th>Model</th>
+              <th>Passengers</th>
+              <th>Maximum speed</th>
+              <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vehicle of getData().results | filter: keyword"> 
+                <td>{{vehicle.model}}</td> 
+                <td>{{vehicle.passengers}}</td>
+                <td>{{vehicle.max_atmosphering_speed}}</td>
+                <td>{{vehicle.cost_in_credits}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+</div>
+
+      <mat-paginator [length]="getData().count"
+              [pageSize]="getData().results.length"
+              [pageIndex]="currentPage - 1"
+              (page)="handleChange($event)"
+              *ngIf='getData() !== undifined'>
+  </mat-paginator>
+

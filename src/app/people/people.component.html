@@ -1,0 +1,35 @@
+
+ <input type="text" placeholder='Search..' [(ngModel)]="keyword" *ngIf='getData() !== undefined'> 
+
+<div class="main-container" *ngIf='getData() !== undefined'>
+
+    <h1>Characters</h1>
+
+    <table class="highlight centered">
+        <thead>
+          <tr>
+          <th>Name</th>
+          <th>Birth year</th>
+          <th>Color</th>
+          <th>Height</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of getData().results | filter:keyword"> 
+            <td>{{item.name}}</td>
+            <td>{{item.birth_year}}</td>
+            <td>{{item.skin_color}}</td>
+            <td>{{item.height}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<mat-paginator [length]="getData().count"
+              [pageSize]="getData().results.length"
+              [pageIndex]="currentPage - 1"
+              (page)="handleChange($event)"
+              *ngIf='getData() !== undefined'>
+  </mat-paginator>
+  
+ 
