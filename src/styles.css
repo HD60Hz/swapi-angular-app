@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/purple-green.css';
 
-html {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: #f4dc42;
+
+body {
+    background-color: black! important;
 }
+
+.main-container {
+    color: #f4dc42!important; 
+}
+

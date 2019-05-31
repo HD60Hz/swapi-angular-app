@@ -12,10 +12,12 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { PeopleComponent } from './people/people.component';
 import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { PlanetsComponent } from './planets/planets.component';
 
-/* Custom pipe from npm */
+/*NPM Modules */ 
+
+// Search module
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [ AppComponent, MoviesComponent, VehiclesComponent, PeopleComponent, HeaderComponent, MainPageComponent ],
+  declarations: [ AppComponent, MoviesComponent, VehiclesComponent, PeopleComponent, HeaderComponent, MainPageComponent, PlanetsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

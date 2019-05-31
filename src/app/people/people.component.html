@@ -1,29 +1,32 @@
 
  <input type="text" placeholder='Search..' [(ngModel)]="keyword" *ngIf='getData() !== undefined'> 
 
-<div class="main-container" *ngIf='getData() !== undefined'>
+<div class="container-fluid">
+    <div class="main-container row" *ngIf='getData() !== undefined'>
 
-    <h1>Characters</h1>
-
-    <table class="highlight centered">
-        <thead>
-          <tr>
-          <th>Name</th>
-          <th>Birth year</th>
-          <th>Color</th>
-          <th>Height</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of getData().results | filter:keyword"> 
-            <td>{{item.name}}</td>
-            <td>{{item.birth_year}}</td>
-            <td>{{item.skin_color}}</td>
-            <td>{{item.height}}</td>
-          </tr>
-        </tbody>
-      </table>
+        <h1 class="ol-sm-12 col-md-3 col-lg-3 col-xl-3 justify-content-sm-center">Characters</h1>
+    
+        <table class="highlight centered col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <thead>
+              <tr>
+              <th>Name</th>
+              <th>Birth year</th>
+              <th>Color</th>
+              <th>Height</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of getData().results | filter:keyword"> 
+                <td>{{person.name}}</td>
+                <td>{{person.birth_year}}</td>
+                <td>{{person.skin_color}}</td>
+                <td>{{person.height}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
 </div>
+ 
 
 <mat-paginator [length]="getData().count"
               [pageSize]="getData().results.length"

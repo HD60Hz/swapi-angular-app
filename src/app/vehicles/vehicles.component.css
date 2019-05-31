@@ -1,37 +1,49 @@
-
 .main-container {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-}
+  }
+  
+  
+  @media screen and (max-width: 768px) {
 
-table {
-    width: 90%;
-    margin-right: 2%;
-}
+    th {
+      border-bottom: 1px solid #f4dc42;
+    }
 
-tbody {
-    border-left: 1px solid #f4dc42;    
-}
+    h1 {
+      text-align: center;
+      margin: 5% 5% 5% 5%;
+    }
 
-h1 {
-    margin-right: 3%;
-    margin-top: 40vh;
-    margin-left: 2%;
-}
+  }
 
-mat-paginator {
+  @media screen and (min-width: 768px) {
+    h1 {
+      text-align: left;
+      margin-right: 2%;
+      margin-left: 2%;
+      padding-top: 20%;  
+    }
+
+    tbody {
+      border-left: 1px solid #f4dc42;
+    }
+  }
+  
+  
+  
+  mat-paginator {
     background-color: black;
-    color: #f4dc42; 
-}
-
-
-input {
-    color:#f4dc42;
+    color: #f4dc42;
+  }
+  
+  input {
+    color: #f4dc42;
     margin-left: 2%;
     border-bottom: 1px solid #f4dc42 !important;
-}
-
-::placeholder {
+  }
+  
+  ::placeholder {
     color: #f4dc42;
-}
+  }

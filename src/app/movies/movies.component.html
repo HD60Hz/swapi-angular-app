@@ -1,28 +1,83 @@
+<div class="container-fluid">
+<div class="main-container">
 
-<input type="text" placeholder="Search.." [(ngModel)]="keyword" *ngIf='data !== null'>  
+      <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Episod {{data.results[0].episode_id}}: {{data.results[0].title}}</span>
+                <h5>Released: {{data.results[0].release_date}} </h5>
+                <h5 class="underline">Director: {{data.results[0].director}} </h5>
+                <span>{{data.results[0].opening_crawl}}</span>
+              </div>
+            </div>
+          </div>
 
-<div class="main-container" *ngIf='data !== null'>
-  
-  <h1>Movies</h1>
+          <div class="col-md-4">
+              <div class="card">
+                <div class="card-content">
+                  <span class="card-title">Episod {{data.results[1].episode_id}}: {{data.results[1].title}}</span>
+                  <h5>Released: {{data.results[1].release_date}} </h5>
+                  <h5 class="underline">Director: {{data.results[1].director}} </h5>
+                  <span>{{data.results[1].opening_crawl}}</span>
+                </div>
+              </div>
+            </div>
 
-    <table class="highlight centered">
-        <thead>
-          <tr>
-          <th>Title</th>
-          <th>Episode</th>
-          <th>Released</th>
-          <th>Director</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let movie of data.results | filter:keyword"> 
-            <td>{{movie.title}}</td>
-            <td>{{movie.episode_id}}</td>
-            <td>{{movie.release_date}}</td>
-            <td>{{movie.director}}</td>
-          </tr>
-        </tbody>
-      </table>
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">Episod {{data.results[2].episode_id}}: {{data.results[2].title}}</span>
+                    <h5>Released: {{data.results[2].release_date}} </h5>
+                    <h5 class="underline">Director: {{data.results[2].director}} </h5>
+                    <span>{{data.results[2].opening_crawl}}</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-content">
+                      <span class="card-title">Episod {{data.results[3].episode_id}}: {{data.results[3].title}}</span>
+                      <h5>Released: {{data.results[3].release_date}} </h5>
+                      <h5 class="underline">Director: {{data.results[3].director}} </h5>
+                      <span>{{data.results[3].opening_crawl}}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-content">
+                        <span class="card-title">Episod {{data.results[4].episode_id}}: {{data.results[4].title}}</span>
+                        <h5>Released: {{data.results[4].release_date}} </h5>
+                        <h5 class="underline">Director: {{data.results[4].director}} </h5>
+                        <span>{{data.results[4].opening_crawl}}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <span class="card-title">Episod {{data.results[5].episode_id}}: {{data.results[5].title}}</span>
+                          <h5>Released: {{data.results[5].release_date}} </h5>
+                          <h5 class="underline">Director: {{data.results[5].director}} </h5>
+                          <span>{{data.results[5].opening_crawl}}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                          <div class="card-content">
+                            <span class="card-title">Episod {{data.results[6].episode_id}}: {{data.results[6].title}}</span>
+                            <h5>Released: {{data.results[6].release_date}} </h5>
+                            <h5 class="underline">Director: {{data.results[6].director}} </h5>
+                            <span>{{data.results[6].opening_crawl}}</span>
+                          </div>
+                        </div>
+                      </div>
+  </div>
 </div>
 

@@ -1,32 +1,32 @@
 
 <input type="text" placeholder="Search.." [(ngModel)]="keyword" *ngIf='getData() !== undifined'>  
 
-<div class="container-fluid">
+<div class='container-fluid'>
     <div class="main-container row" *ngIf='getData() !== undifined'>
     
-        <h1 class="col-sm-12 col-md-3 col-lg-3 col-xl-3 justify-content-sm-center">Starships</h1>
+        <h1 class="col-sm-12 col-md-3 col-lg-3 col-xl-3 justify-content-sm-center">Planets</h1>
       
           <table class="highlight centered col-sm-12 col-md-8 col-lg-8 col-xl-8">
                   <thead>
                     <tr>
-                    <th>Model</th>
-                    <th>Passengers</th>
-                    <th>Maximum speed</th>
-                    <th>Price</th>
+                    <th>Name</th>
+                    <th>Population</th>
+                    <th>Climate</th>
+                    <th>Gravity</th>
                   </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let starship of getData().results | filter: keyword"> 
-                      <td>{{starship.model}}</td> 
-                      <td>{{starship.passengers}}</td>
-                      <td>{{starship.max_atmosphering_speed}}</td>
-                      <td>{{starship.cost_in_credits}}</td>
+                    <tr *ngFor="let planet of getData().results | filter: keyword"> 
+                      <td>{{planet.name}}</td> 
+                      <td>{{planet.population}}</td>
+                      <td>{{planet.climate}}</td>
+                      <td>{{planet.gravity}}</td>
                     </tr>
                   </tbody>
                 </table>
+      
       </div>
 </div>
-
 
 
       <mat-paginator [length]="getData().count"

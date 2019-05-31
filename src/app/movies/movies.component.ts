@@ -6,24 +6,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
+
+  // Local storage set-up
+  constructor() {
+    const dataFromCache = JSON.parse(localStorage.getItem('moviesApiResponse'));
+    if (dataFromCache !== null) {
+      this.data = dataFromCache;
+    }
+  }
+
   data = null;
+
 
   getData() {
     return this.data
   }
   
   ngOnInit() {
-    this.fetchMovie();
+    this.getMovies();
   }
 
-  fetchMovie() {
-    this.data = null;
-    fetch(`https://swapi.co/api/films/?page=1`)
+  getMovies() {
+    if (this.getData()) {
+      return;
+    };
+
+    fetch(`https://swapi.co/api/films`)
       .then(response => response.json())
       .then(responseJson => {
-        console.warn('Response Movies: ', responseJson);
         this.data = responseJson;
+        console.log(this.data)
+
+        // Pushing data to localStorage
+        localStorage.setItem('movieSwapiResponse', JSON.stringify(this.data));
       })
+
+
   }
+  
   
 }
