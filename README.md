@@ -7,13 +7,9 @@ Stack: Angular 6, Bootstrap 4.
 ![Image](https://github.com/dyeroshenko/swapi-angular-app/blob/master/git_images/Screenshot%202019-06-01%20at%2002.31.34.png)
 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
 ## How to run?
 
-1. Get this repo on your machine
+1. Get this project to your machine
 2. Run `ng serve` for a dev server navigated to `http://localhost:4200/`. Or run `ng serve` with open flag: `ng serve --open` to launch local developer server. 
 
 ## Build
