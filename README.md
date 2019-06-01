@@ -1,7 +1,9 @@
 # SwapiApp
 
 Simple Angular interface for fetching data from the Star Wars API (https://swapi.co/). 
-Stack: Angular 6, Bootstrap 4. 
+Stack: Angular 6, Bootstrap 4.
+
+Demo: https://wmaixmgz.github.stackblitz.io/
 
 
 ![Image](https://github.com/dyeroshenko/swapi-angular-app/blob/master/git_images/Screenshot%202019-06-01%20at%2002.31.34.png)
