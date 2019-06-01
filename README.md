@@ -1,27 +1,21 @@
-# SwapiAngularApp
+# SwapiApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+Simple Angular interface for fetching data from the Star Wars API (https://swapi.co/). 
+Stack: Angular 6, Bootstrap 4. 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Image](https://github.com/dyeroshenko/swapi-angular-app/blob/master/git_images/Screenshot%202019-06-01%20at%2002.31.34.png)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## How to run?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Get this repo on your machine
+2. Run `ng serve` for a dev server navigated to `http://localhost:4200/`. Or run `ng serve` with open flag: `ng serve --open` to launch local developer server. 
 
-## Running end-to-end tests
+## Build
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng serve --build` to build the project and run with your browser. The build artifacts will be stored in the `dist/` directory.
